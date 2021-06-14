@@ -19,11 +19,13 @@ export class ArtykulyComponent implements OnInit {
 
   constructor(private artykulyService: ArtykulyService, private koszykService: KoszykService) { }
 
-  ngOnInit(): void {
-    this.artykulyService.pobierzArtykuly(this.stronnicowanie).subscribe(artykuly => {this.artykuly = artykuly; });
-  }
+  ngOnInit(): void {this.odswiez(); }
 
   dodajDoKoszyka(artykul: Artykul) {
     this.koszykService.dodajDoKoszyka(artykul);
+  }
+
+  odswiez() {
+    this.artykulyService.pobierzArtykuly(this.stronnicowanie).subscribe(artykuly => {this.artykuly = artykuly; });
   }
 }

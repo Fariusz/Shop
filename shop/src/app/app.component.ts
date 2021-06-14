@@ -26,10 +26,6 @@ export class AppComponent {
     this.appTitle.setTitle("Shop");
   }
 
-  odswiez() {
-    this.artykulyService.pobierzArtykuly(this.stronnicowanie).subscribe(res => this.artykuly = res);
-  }
-
   onArtykulClick(val: boolean){
     if(val)this.licznik++;
     else this.licznik--;
