@@ -15,6 +15,10 @@
       </li>
     <button (click)="dodajDoKoszyka(artykul)" class="btn btn-block btn-outline-primary">Dodaj do koszyka</button>
   </div>
-
+  <div>
+    <label>Strona</label> <input type="number" [(ngModel)]="stronnicowanie.strona">
+    <label>Ilość</label> <input type="number" [(ngModel)]="stronnicowanie.ilosc">
+    <button (click)="odswiez()">Przejdź</button>
+</div>
 </div>
 
