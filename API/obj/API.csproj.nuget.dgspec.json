@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Radek\\Desktop\\Shop\\API\\API.csproj": {}
+    "C:\\Users\\Radek\\Desktop\\TIU\\Praca_wlasna\\lab6\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Radek\\Desktop\\Shop\\API\\API.csproj": {
+    "C:\\Users\\Radek\\Desktop\\TIU\\Praca_wlasna\\lab6\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radek\\Desktop\\Shop\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Radek\\Desktop\\TIU\\Praca_wlasna\\lab6\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Radek\\Desktop\\Shop\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Radek\\Desktop\\TIU\\Praca_wlasna\\lab6\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radek\\Desktop\\Shop\\API\\obj\\",
+        "outputPath": "C:\\Users\\Radek\\Desktop\\TIU\\Praca_wlasna\\lab6\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Artykul } from 'models/artykul';
-import { ArtykulyService } from '../artykuly.service';
-import { KoszykService } from '../koszyk.service';
+import { ArtykulyService } from '../artykuly/artykuly.service';
+import { KoszykService } from './koszyk.service';
 
 @Component({
   selector: 'app-koszyk',
