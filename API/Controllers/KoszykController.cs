@@ -1,5 +1,6 @@
 ﻿using API.Models;
 using API.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -30,6 +31,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IEnumerable<ArtykulDto> Dodaj([FromBody] int id)
         {
             ArtykulDto dto = _artykulyService.ZnajdzPoId(id);
@@ -37,6 +39,7 @@ namespace API.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         public IEnumerable<ArtykulDto> Wyczysc()
         {
            return _koszykService.Wyczysc();

@@ -11,6 +11,9 @@ import { FormularzComponent } from './formularz/formularz.component';
 import { SklepComponent } from './sklep/sklep.component';
 import { MenuComponent } from './menu/menu.component';
 import {RouterModule} from '@angular/router';
+import { LogowanieComponent } from './logowanie/logowanie.component';
+import { CzerwonyTekstDirective } from './czerwonyTekstDirective/czerwony-tekst.directive';
+import { AutoryzacjaDirective } from './autoryzacja/autoryzacja.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import {RouterModule} from '@angular/router';
     ArtykulyComponent,
     FormularzComponent,
     SklepComponent,
-    MenuComponent
+    MenuComponent,
+    LogowanieComponent,
+    CzerwonyTekstDirective,
+    AutoryzacjaDirective
   ],
   imports: [
     BrowserModule,

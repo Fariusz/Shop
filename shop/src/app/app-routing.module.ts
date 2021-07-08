@@ -5,21 +5,29 @@ import {SklepComponent} from './sklep/sklep.component';
 import {ArtykulyComponent} from './artykuly/artykuly.component';
 import {FormularzComponent} from './formularz/formularz.component';
 import {KoszykComponent} from './koszyk/koszyk.component';
+import {LogowanieComponent} from './logowanie/logowanie.component';
+import {AutoryzacjaGuard} from './autoryzacja/autoryzacja.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: MenuComponent
+    component: MenuComponent,
+    canActivate: [AutoryzacjaGuard]
+  },
+  {
+    path: 'logowanie',
+    component: LogowanieComponent
   },
   {
     path: 'koszyk',
-    component: KoszykComponent
+    component: KoszykComponent,
+    canActivate: [AutoryzacjaGuard]
   },
   {
     path: 'artykuly', children: [
-      {path: '', component: SklepComponent},
-      {path: 'nowy', component: FormularzComponent},
-      {path: ':id', component: FormularzComponent},
+      {path: '', component: SklepComponent, canActivate: [AutoryzacjaGuard]},
+      {path: 'nowy', component: FormularzComponent, canActivate: [AutoryzacjaGuard], data: {dozwolonaRola: 'Admin'}},
+      {path: ':id', component: FormularzComponent, canActivate: [AutoryzacjaGuard], data: {dozwolonaRola: 'Admin'}},
     ]
   }
 ];

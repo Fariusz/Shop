@@ -4,6 +4,7 @@ import { Artykul } from 'models/artykul';
 import {ArtykulyService, Stronnicowanie} from '../artykuly/artykuly.service';
 import { KoszykService } from '../koszyk/koszyk.service';
 import {Router} from '@angular/router';
+import {AutoryzacjaService} from '../autoryzacja/autoryzacja.service';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ export class AppComponent {
   licznik: number = 0;
   artykuly: Artykul[] = [];
 
-  constructor(private appTitle: Title, private artykulyService: ArtykulyService, private koszykService: KoszykService, private router: Router){}
+  constructor(private appTitle: Title, private artykulyService: ArtykulyService, private koszykService: KoszykService, private router: Router, private autoryzacjaService: AutoryzacjaService){}
 
   ngOnInit(){
     this.appTitle.setTitle("Shop");
@@ -33,5 +34,10 @@ export class AppComponent {
 
   powrot(){
     this.router.navigateByUrl('');
+  }
+
+  wyloguj(){
+    this.autoryzacjaService.wyloguj();
+    this.router.navigateByUrl('logowanie');
   }
 }

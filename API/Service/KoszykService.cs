@@ -10,7 +10,7 @@ namespace API.Service
     {
         private static List<ArtykulDto> Koszyk = new List<ArtykulDto>
         {
-            new ArtykulDto{id = 99, nazwa = "Dostawa", opis = "DHL", cena = 99}
+            new ArtykulDto{id = 99, nazwa = "Dostawa", opis = "DHL", cena = 15}
         };
 
         public IEnumerable<ArtykulDto> Pobierz()
